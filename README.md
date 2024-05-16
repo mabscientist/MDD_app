@@ -1,4 +1,4 @@
-#MDD_app
+# MDD_app
 
 This is the code and outdated data from the Mammal Diversity Database for an R-based Shiny app analyzing trends in global mammalian taxonomy. 
 
