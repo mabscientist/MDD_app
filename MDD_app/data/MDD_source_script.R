@@ -72,7 +72,7 @@ continent_key <-
 # MDD setup -------------------------------------------------------
 
 MDD_tbl <-
-  read_csv('data/MDD.csv') %>% 
+  read_csv('data/MDD_6.20.2024.csv') %>% 
   
   # don't include domestic species or recently extinct species
   # don't include the one species with no country distribution data
@@ -123,6 +123,11 @@ points <-
   # filter for non-NA latitude values
   
   filter(!is.na(lat)) %>% 
+
+  # filter for uncertain lat/lon values
+  
+  filter(!grepl("\\(", long)) %>% 
+  filter(!grepl("\\(", lat)) %>% 
   
   # make into shapefile
   
